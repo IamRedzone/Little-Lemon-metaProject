@@ -206,7 +206,14 @@ footer {
         
     }
 }
+input[type="email"]:focus, input[type="password"]:focus{
+    outline: 2px solid green;
+}
 input[type="email"]:invalid {
+    border:1px solid red; /* Change border color for invalid input */
+    box-shadow: 0 0 3px red; /* Add a red shadow for emphasis */
+  }
+input[type="password"]:invalid {
     border:1px solid red; /* Change border color for invalid input */
     box-shadow: 0 0 3px red; /* Add a red shadow for emphasis */
   }
