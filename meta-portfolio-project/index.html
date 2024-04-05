@@ -1,0 +1,230 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="rating" content="safe for kids">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Christopher Red">
+    <meta name="description"
+        content="Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Lemon</title>
+    <meta property="og:title" content="Little Lemon Restaurant" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.littlelemon.com">
+    <meta property="og:image" content="images/Asset16@4x.png">
+    <meta property="og:description"
+        content="Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. ">
+    <meta property="og:site_name" content="Little Lemon Restaurant">
+    <meta property="og:locale" content="en_US">
+
+    <!-- for here you add the icon elements and fonts links -->
+    <link rel="icon" type="image/x-icon" href="images/Asset9@4x.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Asset9@4x.ico">
+    <!-- always add the link for css last -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/496de5bb49.js" crossorigin="anonymous"></script>
+</head>
+
+<body >
+
+    <div class="main-container">
+        <div class="container">
+            <section class="head">
+                <header>
+                    <img class="head-logo" src="images/Asset16@4x.png" alt="This is the Little Lemon restaurant logo">
+                </header>
+                <nav>
+                    <button id="dropdown-toggle-btn"><i class="fa-solid fa-2x dropdown-toggle fa-bars" style="color: green"></i></button>
+                    <div class="navbar popup-navigation-open">
+                    <ul >
+                        
+                        <li class="drop" tabindex="0"><a href="#">Home</a></li>
+                        <li class="drop"  tabindex="0"><a href="#">Products</a></li>
+                        <li class="drop" tabindex="0"><a href="#">Contact us</a></li>
+                        <li class="drop" tabindex="0"><a href="#">Info</a></li>
+                    </ul>
+                </div>
+                </nav>
+            </section>
+            <main class="main">
+                <section class="promotion">
+                    <section class="card">
+                        <div class="register">
+                        <h2>Sign up</h2>
+                        <p>Sign up to be able to enjoy discounts, international native delicacies and
+                            <br>
+                            <em>make online
+                                reservations</em>
+                        </p>
+
+                        <form class="form-formflex" >
+                            <div class="formflex">
+
+                                <label class="for-email" for="Email">Email:
+                                    <input type="email" name="Email" minlength="6" id="Email"
+                                        placeholder="johndoe@email.com">
+                                </label>
+                                <label class="for-pass" for="password">Password:
+                                    <input type="password" name="password" id="password" minlength="6">
+                                </label>
+
+                            </div>
+                            <p class="promotion-newsletter"><input type="checkbox" checked> Subscribe to our newsletter
+                                for
+                                traditional recipes and meal histories</p>
+                            <div class="contact-submit">
+                                <button type="submit" class="submit-email">submit</button>
+                            </div>
+                        </form>
+                    </div>
+                        <div class="reserve-now">
+                            <h2>Booking</h2>
+                            <form class="form-formreserve">
+                                <p>Would you like to make a reservation at any of our restaurants right away?</p>
+                                <fieldset id="reservations">
+                                    <label for="reserve">Yes
+                                        <input type="radio" name="reservations" id="reserve" value="Yes" checked>
+                                    </label>
+                                    <label for="no-reserve">No
+                                        <input type="radio" name="reservations" id="no-reserve" value="No">
+                                    </label>
+                                </fieldset>
+                                <p>Get a table at the Little lemon close to you</p>
+                                <label for="locations">Choose your location:</label>
+                                <input type="list" id="locations" list="locations-list">
+                                <datalist id="locations-list">
+                                    <option value="Rudolph WI">Little Lemon, Rudolph WI</option>
+                                    <option value="Albuquerque New Mexico">Little Lemon, Albuquerque New Mexico</option>
+                                    <option value="Kansas Texas">Little Lemon, Kansas Texas</option>
+                                    <option value="Cleveland Ohio">Little Lemon, Cleveland Ohio</option>
+                                    <option value="Houston Texas">Little Lemon, Houston Texas</option>
+                                    <option value="Chicago Illinois">Little Lemon, Chicago Illinois</option>
+                                </datalist>
+                                <p>Where would you like to enjoy your meal? (Please select)</p>
+                                <fieldset id="position">
+                                    <div class="position">
+                                        <label for="Indoors">Indoors
+                                            <input type="radio" name="position" id="Indoors" value="Indoors" checked>
+                                        </label>
+                                        <label for="Outdoors">Outdoors
+                                            <input type="radio" name="position" id="Outdoors" value="Outdoors">
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <label for="numPersons">Number of Persons:
+                                    <input type="range" min="1" max="6" name="numPersons" id="numPersons" value="1"
+                                        oninput="this.nextElementSibling.value = this.value  ">
+                                    <output></output>
+                                </label>
+                                <br>
+                                <!-- <select id="numPersons" name="numPersons">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Persons</option>
+                                <option value="3">4 Persons</option>
+                                <option value="3">6 Persons</option>
+
+                                
+                            </select> -->
+                                <button type="submit">Reserve table</button>
+                            </form>
+                            </div>
+                    </section>
+                    <section class="popular">
+                        <h2>Popular Picks</h2>
+                        <p>Highlighting our customers' favorite dishes - these are the meals that help you
+                            assimilate an
+                            entire culture of flavor !</p>
+                    </section>
+
+    </section>
+    <section class="menu">
+
+        <div class="first-box">
+            <figure>
+                <img loading="lazy" src="images/greek-salad.jpg" alt="a picture of Greek-salad">
+                <h3>Greek salad</h3>
+                <figcaption>A traditional Greek salad consists of sliced cucumbers, tomatoes, green bell
+                    pepper,
+                    red onion, olives, and feta cheese. </figcaption>
+            </figure>
+
+        </div>
+
+
+        <div class="second-box">
+            <figure>
+                <img loading="lazy" src="images/Kadayif-with-Pistachio.jpg"
+                    alt="a photo of turkish dish Kadayif and Pistachio">
+                <h3>Kadayif with Pistachio</h3>
+                <figcaption>Meticulously prepared handmade kadayif and pistachio come together to create an
+                    exquisite flavor. </figcaption>
+            </figure>
+
+        </div>
+        <div class="third-box">
+            <figure>
+                <img loading="lazy" src="images/pasta-bolognese.jpg" alt="an image of tasty pasta-bolognese">
+                <h3>Pasta-bolognese</h3>
+                <figcaption>Our best ever spaghetti bolognese is super easy and a true Italian classic with
+                    a
+                    meaty, chilli sauce.</figcaption>
+            </figure>
+
+        </div>
+    </section>
+    </main>
+    <div class="sidebar left"> </div>
+    <div class="sidebar right"> </div>
+
+    <footer>
+        <div class="foot-box">
+            <section class="logo-contact">
+                <div class="footer-logo">
+                    <figure>
+                        <img src="images/Asset18_4x.svg" alt="this is a small littlelemon logo">
+                    </figure>
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>+1 720 346 619</li>
+                        <li>littlelemon@hotmail.com</li>
+                        <li>Request Refund !!</li>
+                        <li>About Us</li>
+
+                    </ul>
+                    <br>
+                    <p>From our Family to Yours, A Journey Through Mediterranean Cuisine</p>
+                </div>
+            </section>
+            <section class="copyright">
+                <div class="footer-form">
+
+                    <h4>Join our newsletter</h4>
+                    <form class="footer-news">
+                        <label for="email-footer"> Email:</label>
+                        <input type="email" minlength="6" placeholder="johndoe@gmail.com" name="email-footer"
+                            id="email-footer>">
+                        <button type="submit">Submit</button>
+                    </form>
+
+                </div>
+
+
+                <ul class="icons">
+                    <li><a href="#"><i class="fa-brands fa-2x fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-2x fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-2x fa-facebook"></i></a></li>
+                </ul>
+                <p class="copy-r">© Little Lemon restaurants</p>
+            </section>
+        </div>
+    </footer>
+    </div>
+    </div>
+    <script src="webapp.js"></script>
+</body>
+
+</html>

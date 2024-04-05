@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
+
+*{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+   
+
+input[type="range"]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10%; /* Set width */
+  height: 10px; /* Set height */
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid black;
+  background: hsla(0, 0%, 100%, 1); /* Set background color */
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none;
+    width: 15px; /* Set width of the thumb */
+    height: 15px; /* Set height of the thumb */
+    background: hsla(0, 0%, 0%, 1); /* Set background color of the thumb */
+    border-radius: 50%; /* Make it round */
+    cursor: pointer; /* Add cursor pointer */
+  }
+
+  /* input default */
+  input[type="radio"] {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none;
+    width: 12px; /* Set width */
+    height: 12px; /* Set height */
+    border-radius: 50%; /* Make it round */
+    border: 2px solid white; 
+    /* Remove outline */
+    outline: 2px solid black;
+    
+    cursor: pointer; /* Add cursor pointer */
+  }
+  input[type="radio"]:checked {
+    background-color: hsla(0, 0%, 0%, 1); /* Change background color when checked */
+  }
+ul{
+    list-style: none;
+}
+/*Have to clear styling for fieldset because its outputting a full rectangle with border and all*/
+fieldset {
+    /* Resetting margin and padding */
+    margin: 0;
+    padding: 0;
+    
+    /* Resetting border */
+    border: none;
+    
+    /* Resetting legend styles */
+    /* (Optional, if you want to remove the legend) */
+    display: block;
+    width: auto;
+    padding: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+#dropdown-toggle-btn{
+    display: none;
+}
+.reserve-now{
+    display: none;
+    
+}
+/*For whole page off-white color*/
+body{
+    background-color:  #F5F5F5;
+    
+    
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+/*For the header logo to be centered and fit*/
+header img{
+    width: 40vw;
+    height: 17vh;
+    padding: 2vh 0;
+}
+header{
+    display: flex;
+    
+    justify-content: center;
+}
+/* hamburger grid */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+.container{
+    display: grid;
+    
+    width: 95vw;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+   
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas: "header" "left" "main" "right" "footer";
+}
+.head {
+    grid-area: header;
+   max-width: 100vw;
+  
+}
+  
+main {
+    grid-area: main;
+   padding: 5vh 0 5vh 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+  
+.left {
+    grid-area: left;
+  }
+  
+.right {
+    grid-area: right;
+  }
+  
+footer {
+    grid-area: footer;
+    max-width: 200vw;
+    margin: 0 -65px 0 -47px;
+    position: relative;
+    color: white;
+    background-color: #000000;
+    font-size: 0.8rem;
+  }
+ .foot-box{
+    padding: 0 20px;
+ }
+  
+
+  /* To control the visibility of sidebars and responsiveness of grid */
+  @media (min-width: 900px) {
+    .container {
+    /* Add rules here */
+   
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header" 
+                         "left main right" 
+					               "footer footer footer";
+    }
+}
+@media (max-width: 440px) {
+    .container {
+    /* Add rules here */
+    margin: 0;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header" 
+                         "main main main" 
+					               "footer footer footer";
+    }
+  
+    .popup-navigation-open{
+        display: none;
+
+    }
+    nav li{
+        border: 1px solid gray;
+        border-radius: 5px;
+        min-width: 100%;
+        padding: 5px 0;
+    }
+    nav ul{
+        display:flex ;
+        flex-direction: column;
+        
+    }
+    .dropdown-toggle {      
+        width: 30px;
+      }
+      #dropdown-toggle-btn{
+        display: block;
+      }
+    html{
+        font-size: 12px;
+    }
+    header img{
+        width: 60vw;
+        height: 17vh;
+        padding: 2vh 0;
+    }
+    .menu{
+       text-align: center;
+        
+    }
+}
+input[type="email"]:invalid {
+    border:1px solid red; /* Change border color for invalid input */
+    box-shadow: 0 0 3px red; /* Add a red shadow for emphasis */
+  }
+/*Nav section*/
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-weight: 400;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
+}
+ul a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+nav li:hover{
+    text-decoration: underline;
+    font-weight: 600;
+    color: green;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+nav{
+    padding: 1.5vh 8%;
+}
+/*Section 2*/
+.promotion{
+    text-align: center;
+    /*Centering topic for main  section*/
+    padding: 0 20%;
+    
+}
+.card{
+    background: url("images/lemons.jpg");
+    background-size: cover;
+    color: #E0E0E0;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3vh 3vw;
+    border-radius:4%;
+    
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.promotion h2{
+    padding: 0 0 1vh 0;
+    font-weight: 600;
+    color: green;
+}
+.formflex{
+    display: flex;
+flex-wrap: wrap;
+
+justify-content:  center;
+margin: 1vh 0 1vh 0;
+}
+.formflex label{
+    font-size: 0.8em;
+    margin: 0 1vw;
+}
+
+.formflex input{
+    border-radius: 6px;
+    border: 1px solid #E0E0E0;
+    height: 30px;
+    padding-left: 1rem;
+}
+.promotion-newsletter{
+    font-size: 0.8em;
+}
+.for-email, .for-pass{
+    padding: 5% 0 0 0;
+}
+.for-email{
+    padding-left: 5%;
+}
+    
+.contact-submit {
+    padding: 3vh 0 3vh 0;
+    color: #E0E0E0;
+}
+.contact-submit button, .form-formreserve button{
+    background-color:  hsla(0, 0%, 0%, 0.7);
+    color: #E0E0E0;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    border: none;
+    
+}
+.form-formreserve button{
+    margin: 2vh auto;
+}
+.contact-submit button:hover, .form-formreserve button:hover{
+    background-color: hsla(0, 0%, 0%, 1);
+    transition: 0.3s ease-in-out;
+    
+}
+
+.menu img{
+    width: 280px;
+    height: 270px;
+    padding: 3% 0;
+    border-radius: 16px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+    gap: 50px;
+}
+.first-box, .second-box, .third-box{
+    width: 300px;
+    height: 410px;
+    border-radius: 18px;
+    border: 1px;
+    background-color: white;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+figure > h3{
+    font-size: 1em;
+    font-weight: 600;
+    color: green;
+}
+.menu figcaption{
+    padding: 3% 3%;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+/* Deal with footer here */
+
+
+footer img{
+    width: 120px;
+    height: 170px;
+    
+}
+.foot-box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5vh 10vw;
+    width: 100%;
+    justify-content: center;
+    gap: 3rem;
+}
+.logo-contact{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+.copyright{
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+.contact-info ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+    list-style-type: none;
+    
+}
+.contact-info{
+    margin-top: 3%;
+}
+.footer-form{
+    margin-top: 3%;
+}
+.contact-info li{
+    line-height: 1.5;
+}
+footer h4{
+    padding-bottom: 1rem;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    
+    padding: 1rem 0;
+}
+.copy-r{
+    position: relative;
+    left: 20%;
+    top: 10%;
+}
+.copyright input{
+    border-radius: 6px;
+    border: 1px solid #E0E0E0;
+    height: 30px;
+    padding-left: 10px;
+}
+.footer-news button{
+    background-color:  hsla(0, 0%, 100%, 0.7);
+    color: black; 
+    font-size: .9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 28px;
+    width: 100px;
+    border: none;
+    margin-top: 7%;
+}
+.footer-news button:hover{
+    background-color: hsla(0, 0%, 100%, 1);
+    transition: 0.3s ease-in-out;
+}
+.footer-news{
+    display: flex;
+    flex-direction: column;
+}
+.footer-news label{
+    padding-bottom: 0.5rem;
+}
+.popular{
+    padding: 5vh 0 2vh 0;
+}
