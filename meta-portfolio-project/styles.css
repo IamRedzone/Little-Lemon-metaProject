@@ -171,7 +171,18 @@ footer {
                          "main main main" 
 					               "footer footer footer";
     }
-  
+     
+    .menu{
+        text-align: center;
+         
+     }
+     .menu>:nth-child(2),.menu>:last-child,.menu>:first-child{
+         margin: auto;
+ 
+ }
+    .promotion{
+        padding: 3%  !important;
+    }
     .popup-navigation-open{
         display: none;
 
